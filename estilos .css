@@ -15,28 +15,29 @@ body {
 
 /* Navbar */
 .navbar {
-    position: fixed; /* Fija la barra de navegación en la parte superior */
-    top: 0; /* La posiciona al inicio de la página */
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%; /* Abarca todo el ancho de la pantalla */
-    z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(to right, beige, beige);
-    color: #e91111;
     padding: 15px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
-.logo {
-    font-size: 2em;
-    font-weight: bold;
+.logo img {
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+/* Ocultar menú de navegación en pantallas pequeñas */
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 .nav-links li {
@@ -44,8 +45,8 @@ body {
 }
 
 .nav-links a {
-    color: #6e3d04;
     text-decoration: none;
+    color: #6e3d04;
     font-size: 1.1em;
     transition: color 0.3s ease;
 }
@@ -54,22 +55,44 @@ body {
     color: #ffdd57;
 }
 
-/* Responsive Navbar */
+/* Estilos para el botón hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background: #333;
+    height: 4px;
+    width: 30px;
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
+    .nav-links {
+        display: none; /* Ocultar las opciones del menú */
         flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: rgb(232, 194, 150);
         text-align: center;
     }
 
-    .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
+    .nav-links.active {
+        display: flex; /* Mostrar el menú cuando se active */
     }
 
-    .nav-links li {
-        margin: 10px 0;
+    .menu-toggle {
+        display: flex; /* Mostrar el botón hamburguesa */
     }
 }
+
 
 /* Header */
 header {
@@ -261,5 +284,4 @@ footer {
     transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
     filter: brightness(1.2); /* Brilla un poco más */
 }
-
 
