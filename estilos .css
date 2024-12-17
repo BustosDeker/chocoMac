@@ -75,7 +75,7 @@ body {
 header {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom, #f79b07, #784801);
+    background: linear-gradient(to bottom, #f79b07, #704605);
     color: #fff;
     border-bottom-left-radius: 50% 10%;
     border-bottom-right-radius: 50% 10%;
@@ -88,7 +88,7 @@ header {
 
 .header-content p {
     font-size: 1.2em;
-    color: #784801;
+    color: #deab5f;
 }
 
 /* Responsive Header */
@@ -228,7 +228,6 @@ footer a:hover {
     }
 }
 
-
 /* Footer */
 footer {
     color: #fff; /* Texto en blanco */
@@ -262,4 +261,5 @@ footer {
     transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
     filter: brightness(1.2); /* Brilla un poco más */
 }
+
 
