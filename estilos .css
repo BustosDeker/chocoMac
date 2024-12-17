@@ -227,3 +227,39 @@ footer a:hover {
         font-size: 0.9em;
     }
 }
+
+
+/* Footer */
+footer {
+    color: #fff; /* Texto en blanco */
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
+    border-top-left-radius: 50% 10%;
+    border-top-right-radius: 50% 10%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+.footer-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #9c5c02; /* Color llamativo para el mensaje */
+}
+
+.social-icon img {
+    width: 50px; /* Tamaño más grande para el ícono */
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+    filter: brightness(1.2); /* Brilla un poco más */
+}
+
